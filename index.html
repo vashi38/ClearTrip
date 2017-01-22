@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Hacker News</title>
+</head>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="app.css"/>
+
+</style>
+<body>
+  <div class="Header" >
+      <h3 class="main_header">Hacker News</h3>
+      <h5 class="sub_header">Best Hacker News Articles</h5>
+  </div>
+
+
+  <div class="articles">
+    <div class="searchbox">
+
+        <div class="input-group input-group-lg search" >
+          <span class="input-group-addon "><i class="glyphicon glyphicon-search"></i></span>
+          <input class="form-control " type="text" name="" placeholder="Search (by Name)" onkeyup="filter()" id = "globalSearch"/>
+          <span class="close-btn" onclick="clearSearch()"><i class=" glyphicon glyphicon-remove-circle"></i></span>
+        </div>
+        <span style="float:left"><i  class="glyphicon glyphicon-filter large" ></i></span>
+      <div class="sortBy">
+        <label>Sort By: </label>
+        <select id ="sortBy" class="" name="sort-date" onchange="filter()">
+          <option value="desc">Latest First</option>
+          <option value="asc">Oldest First</option>
+        </select>
+      </div>
+    </div>
+
+<div class="all_news">
+
+    <div id = "news" class="news" ></div>
+  <center>
+    <input type="button" class="button" name="" value="Previous" onclick = "pre()">
+    <input type="button" class="button" name="" value="Next" onclick = "next()">
+  </center>
+</div>
+</div>
+
+</body>
+<script type="text/javascript" class="button" src="apps.services.js"></script>
+<script type="text/javascript" class="button" src="app.js"></script>
+</html>
