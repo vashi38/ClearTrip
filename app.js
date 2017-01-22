@@ -23,7 +23,7 @@ function sort(newObjects){
 function filter(){
   var value = document.getElementById('globalSearch').value;
   filteredObjects = displayObjs.filter(function(obj){
-    if(obj.title.toLowerCase().indexOf(value.toLowerCase()) !=-1 || obj.displayText.toLowerCase().indexOf(value.toLowerCase()) !=-1)
+    if(obj.title.toLowerCase().indexOf(value.toLowerCase()) !=-1)
       return true;
     else
       return false;
@@ -64,10 +64,10 @@ function update_news(news){
 
 
 function createModel(obj){
-  console.log(JSON.parse(obj));
+  // console.log(JSON.parse(obj));
   // actualResponse = JSON.parse(obj);
   JSON.parse(obj).map(createDisplayModel);
-  console.log(displayObjs);
+  // console.log(displayObjs);
   update_news(displayObjs);
 }
 
